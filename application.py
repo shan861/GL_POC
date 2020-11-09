@@ -22,7 +22,11 @@ def get_encoded(x):
   x = pad_sequences(x, maxlen=max_length, padding = 'post')
   return x
  
-
+def set_default(obj):
+    if isinstance(obj, set):
+        return list(obj)
+    raise TypeError
+  
 @app.route('/')
 def hello():    
     return "APP is running!"
