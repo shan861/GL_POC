@@ -13,11 +13,11 @@ alias python=python3
 virtual env
 ============
 sudo apt install python3-venv
-python3 -m venv tapas-env
+python3 -m venv gl-poc-env
 
 activate vitual env
 ===================
-source tapas-env/bin/activate
+source gl-poc-env/bin/activate
 
 git
 =====
@@ -35,10 +35,10 @@ fatal error: Python.h: No such file or directory
 sudo apt-get install python3-dev
 
 
-gsutil
-=======
-pip install gsutil
-sudo apt-get install -y unzip
+
+run POC code
+=============
+git clone https://github.com/shan861/GL_POC.git
 
 run flask
 ============
@@ -47,10 +47,7 @@ flask run
 
 
 
-run tapas code
-=============
-git clone https://github.com/shan861/tapas-flask-api.git
-gsutil cp gs://tapas_models/2020_04_21/tapas_sqa_base.zip . && unzip tapas_sqa_base.zip
+
 
 
 
